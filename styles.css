@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+/* font-family: Muli; */
+
+/* *{
+    border: 1px red solid;
+} */
+
+body{
+ margin: 0px;
+ background-color: #431f72;
+ font-family: Muli;
+ overflow-x: hidden;
+}
+
+header{
+    color: white;
+    background-color: #5c2a9d;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img{
+    width: 200px;
+    /* margin-top: 10px; */
+    margin-left: 50px;
+    /* border: red 1px solid; */
+
+}
+
+.header__menu{
+    margin-right: 30px;
+    font-family: Muli;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px 0px;
+}
+.header__menu:hover ul, ul:hover{
+    display: block;
+    margin-top: 0px;
+}
+
+.header__menu li{
+    margin: 10px 0px;
+    margin-top: 20px;
+}
+
+.header__menu li a{
+    color: white;
+    text-decoration: none;
+    font-family: Muli;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+
+.header__menu--profile{
+    
+    margin-right: 50px;
+    /* width: 40px; */
+    display: flex;
+}
+
+.header__menu--profile p{
+    height: 100%;
+    
+}
+
+.header__menu--profile img{
+    width: 50px;
+    margin-right: 10px;
+
+/*     border: 1px red solid; */
+}
+
+.main{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.main__title{
+    color: white;
+    font-size: 40px;
+    font-family: Muli;
+
+}
+
+.input{
+    width: 70%;
+    max-width: 1240px;
+    height: 50px;
+    border: 2px white solid;
+    border-radius: 25px;
+    background-color: #5c2a9d;
+    color: white;
+    font-family: Muli;
+    font-size: 16px;
+    padding: 0px 20px;
+    outline: 0px;
+    margin-bottom: 40px;
+       
+}
+
+.input:focus{
+    background-color: #331758;
+}
+
+::placeholder{
+    color: white;
+}
+
+
+/* ---ESTILOS DEL CARRUSEL--- */
+
+.carrousel__title{
+    color: white;
+    font-size: 22px;
+    font-family: Muli;
+    font-weight: 900;
+    /* position: absolute; */
+    /* padding-left: 80px; */
+    width: 100%;
+    max-width: 1240px;
+    /* border: 1px red solid; */
+    text-align: left;
+    margin: auto;
+    margin-bottom: -40px;
+}
+
+.carrousel{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 30px 0px;
+    
+}
+
+.carrousel__container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* white-space: nowrap; */
+    margin: 35px 0px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.carrousel_item{
+    display: inline-block;
+    cursor: pointer;
+    /* background-color: tomato; */
+    width: 200px;
+    min-width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transition: 450ms all;
+    transform-origin: center;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carrousel_item:hover ~ .carrousel_item{
+    transform: translate3d(50px, 0, 0);
+    
+}
+
+.carrousel__container:hover .carrousel_item{
+    opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel_item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carrousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carrousel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+    font-family: Muli;
+    font-size: 15px;
+    
+}
+
+.botones{
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    /* border: 1px red solid; */
+}
+
+.carrousel-item__details--title{
+    margin: 0;
+}
+
+.carrousel-item__details--subtitle{
+    margin: 0;
+}
+
+/* -- PROMO -- */
+
+.promotion__container{
+    /* border: 1px red solid; */
+    width: 100%;
+    height: 50vh;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.6), #431f72),
+    url(imagenes/laptop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    /* box-shadow: inset 0px 0px 600px 250px #431f72; */
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.promotion__container--item {
+    width: 100%;
+    max-width: 1240px;
+    height: 100%;
+/*     border: 1px red solid;    */
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px red solid; */
+    
+}
+
+.promotion__container--item img{
+    width: 50%;
+    border-radius: 15px 15px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2), 0px -5px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.promotion__container--item div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.promotion__container--item div > h2{
+    width: auto;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: -20px;
+    /* border: 1px red solid; */
+    text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3), 0px -5px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.promotion__container--item button{
+    width: 35%;
+    background-color: white;
+    border: 0px;
+    color: #431f72;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;    
+    margin-top: -40px;
+}
+
+.promotion__container--item button:hover{
+    background-color: #9f06f8;
+    color: white;
+}
+
+
+/* --- ESTILO FOOTER --- */
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #331758;
+}
+
+.footer a{
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
